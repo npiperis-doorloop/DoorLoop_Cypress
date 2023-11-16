@@ -3,12 +3,12 @@ describe('template spec', () => {
       Cypress.on('uncaught:exception', (err, runnable) => {
         return false;
       });
-      cy.login()
+      
       cy.get('[data-cy="SideMenu-CreateNewMenu-Button"]').click()                                   //Select pink create new in the top left
       cy.get('[data-cy="SideMenu-CreateNewMenu-Property"]> .jss35').click()
       cy.get('[data-cy="NewProperty-Selection-Residential"] > .MuiButton-label > .jss35').click()
       cy.get('[data-cy="NewProperty-Selection-SingleFamily"] > .MuiButton-label > .jss35').click()
-      cy.get('[style="margin: 0px; padding: 0px; flex-flow: wrap; height: auto; width: auto; align-items: flex-start; justify-content: flex-start; align-self: initial; max-width: none; max-height: none; flex: 0 0 auto; cursor: inherit; min-height: auto; border-radius: 0px; gap: unset;"] > div.DLUI_shake > .MuiButtonBase-root').click()
+      cy.get('#root > div > div.DLUI_View.jss3 > div.notificationsPanelChildrenContainer > div:nth-child(2) > div > div > div > div > div.jss17.jss21 > div > div > div > div > button').click()
       cy.get('input[name="property.address.street1"]').click().type('Justin Norris')                   
       cy.get('input[name="property.address.city"]').click().type('Miami')
       cy.get('input[name="property.address.country"]').click().type('United States')
