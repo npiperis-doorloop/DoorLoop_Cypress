@@ -1,9 +1,7 @@
 describe('Creates new property then deletes it', () => {
 
     it('Checks properties page and new property button is appearing', () => {
-    cy.login()
-
-    cy.wait(5000)
+    
     cy.getById('SideMenu-Main-Rentals').click();
     cy.getById('SideMenu-Rentals-Properties').click();
 

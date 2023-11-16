@@ -3,7 +3,7 @@ describe('template spec', () => {
       Cypress.on('uncaught:exception', (err, runnable) => {
         return false;
       });
-      cy.login()
+      
       cy.get('[data-cy="SideMenu-CreateNewMenu-Button"]').click() 
       cy.get('[data-cy="SideMenu-CreateNewMenu-Lease"]').click()
       cy.get('#AsyncAutoComplete0').click()
