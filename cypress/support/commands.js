@@ -25,7 +25,7 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 Cypress.Commands.add("login", (username, password) => {
-    cy.visit('https://app.doorloop.com')
+    cy.visit('')
     cy.get('#email').type('') //Input username/email login
     cy.get('#password').type('') //Input Password
 
